@@ -1,0 +1,74 @@
+/* About Hero */
+.about-hero {
+    height: 250px;
+    background: linear-gradient(135deg, #4f7397, #6c8fb3);
+}
+
+/* About Card */
+.about-card {
+    background: #eef2f7;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #d1d9e6;
+}
+
+.about-icon {
+    font-size: 50px;
+    color: #4f7397;
+}
+
+/* Info Box */
+.info-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.info-box i {
+    font-size: 40px;
+    color: #4f7397;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: #eef2f7;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #d1d9e6;
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #4f7397;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+    background-color: #4f7397;
+    width: 100%;
+}
+
+.social-icons i {
+    font-size: 18px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-hero {
+        height: 180px;
+        padding: 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 26px;
+    }
+}

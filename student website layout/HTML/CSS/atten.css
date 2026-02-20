@@ -1,0 +1,55 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 10px;
+}
+
+/* Table */
+.table thead th {
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fbff;
+    transition: 0.2s ease;
+}
+
+/* Checkbox Center */
+.form-check-input {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #5c7ea3;
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .text-end {
+        text-align: center !important;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

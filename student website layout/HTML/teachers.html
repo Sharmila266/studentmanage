@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers - EduLink</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/tea.css">
+</head>
+<body>
+
+<!-- Navbar (Same Layout Theme) -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm px-3">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="dashboard.html">
+            <i class='bx bxs-graduation'></i> EduLink
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <i class='bx bx-menu'></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+            <ul class="navbar-nav gap-lg-4 gap-2">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link active" href="teachers.html">Teachers</a></li>
+                <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+                <li class="nav-item"><a class="nav-link" href="attendance.html">Attendance</a></li>
+                <li class="nav-item"><a class="nav-link" href="exams.html">Exams & Result</a></li>
+                <li class="nav-item"><a class="nav-link" href="fees.html">Fees</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                 <li class="nav-item"><a class="nav-link active" href="student_details.html">Student Details</a></li>
+                 <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary px-4" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+
+       
+    </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container py-4">
+
+    <!-- Page Header -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+        <div>
+            <h3 class="fw-bold mb-1">Teachers</h3>
+            <p class="text-muted small mb-0">Manage all teachers and their details</p>
+        </div>
+        <button class="btn btn-primary mt-3 mt-md-0">
+            <i class='bx bx-user-plus'></i> Add New Teacher
+        </button>
+    </div>
+
+    <!-- Search + Filter Row -->
+    <div class="row mb-3">
+        <div class="col-md-6 mb-2">
+            <div class="input-group">
+                <span class="input-group-text"><i class='bx bx-search'></i></span>
+                <input type="text" id="teacherSearch" class="form-control" placeholder="Search teachers...">
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <select class="form-select" id="departmentFilter">
+                <option value="">All Departments</option>
+                <option>Mathematics</option>
+                <option>Science</option>
+                <option>English</option>
+                <option>Computer</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Teachers Table Card -->
+    <div class="card teachers-card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table align-middle mb-0 teachers-table" id="teachersTable">
+                <thead class="table-header">
+                    <tr>
+                        <th>Teacher Name</th>
+                        <th>Employee ID</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-semibold">Dr. Sarah Johnson</td>
+                        <td>TCH001</td>
+                        <td>Mathematics</td>
+                        <td>+91 98765 11111</td>
+                        <td><span class="badge status-active">Active</span></td>
+                        <td class="text-end">
+                            <a href="#" class="action-link">View</a> |
+                            <a href="#" class="action-link">Edit</a> |
+                            <a href="#" class="action-link text-danger">Delete</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-semibold">Mr. David Miller</td>
+                        <td>TCH002</td>
+                        <td>Science</td>
+                        <td>+91 98765 22222</td>
+                        <td><span class="badge status-active">Active</span></td>
+                        <td class="text-end">
+                            <a href="#" class="action-link">View</a> |
+                            <a href="#" class="action-link">Edit</a> |
+                            <a href="#" class="action-link text-danger">Delete</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-semibold">Ms. Emily Brown</td>
+                        <td>TCH003</td>
+                        <td>English</td>
+                        <td>+91 98765 33333</td>
+                        <td><span class="badge status-inactive">Inactive</span></td>
+                        <td class="text-end">
+                            <a href="#" class="action-link">View</a> |
+                            <a href="#" class="action-link">Edit</a> |
+                            <a href="#" class="action-link text-danger">Delete</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-semibold">Mr. James Wilson</td>
+                        <td>TCH004</td>
+                        <td>Computer</td>
+                        <td>+91 98765 44444</td>
+                        <td><span class="badge status-active">Active</span></td>
+                        <td class="text-end">
+                            <a href="#" class="action-link">View</a> |
+                            <a href="#" class="action-link">Edit</a> |
+                            <a href="#" class="action-link text-danger">Delete</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="fw-semibold">Mrs. Olivia Thomas</td>
+                        <td>TCH005</td>
+                        <td>Science</td>
+                        <td>+91 98765 55555</td>
+                        <td><span class="badge status-active">Active</span></td>
+                        <td class="text-end">
+                            <a href="#" class="action-link">View</a> |
+                            <a href="#" class="action-link">Edit</a> |
+                            <a href="#" class="action-link text-danger">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer text-white">
+    <div class="container text-center py-4">
+        <div class="row">
+            <div class="col-6 col-md-3 mb-2">About Us</div>
+            <div class="col-6 col-md-3 mb-2">Contact</div>
+            <div class="col-6 col-md-3 mb-2">Privacy Policy</div>
+            <div class="col-6 col-md-3 mb-2">Terms of Service</div>
+        </div>
+
+        <div class="social-icons my-2">
+            <i class='bx bxl-facebook'></i>
+            <i class='bx bxl-twitter'></i>
+            <i class='bx bxl-instagram'></i>
+        </div>
+
+        <p class="mb-0 small">©2024 EduLink. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="CSS/JAVASCRIPT/tea.js"></script>
+
+</body>
+</html>

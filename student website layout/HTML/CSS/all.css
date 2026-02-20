@@ -1,0 +1,60 @@
+/* Students Card */
+.students-card {
+    background: #eef2f7;
+    border-radius: 12px;
+    border: 1px solid #cfd6e4;
+}
+
+/* Table Header */
+.table-header {
+    background-color: #e3e9f3;
+    font-weight: 600;
+}
+
+/* Table Styling */
+.students-table th,
+.students-table td {
+    padding: 16px 18px;
+    vertical-align: middle;
+}
+
+/* Status Badges */
+.status-active {
+    background-color: #d1f2eb;
+    color: #0f766e;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.status-inactive {
+    background-color: #f8d7da;
+    color: #842029;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Action Links */
+.action-link {
+    text-decoration: none;
+    color: #4f7397;
+    font-weight: 500;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Table Tweaks */
+@media (max-width: 768px) {
+    .students-table th,
+    .students-table td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}

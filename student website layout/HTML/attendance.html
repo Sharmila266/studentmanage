@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management - EduLink</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/atten.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class='bx bxs-graduation'></i> EduLink
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                 <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
+                <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+                <li class="nav-item"><a class="nav-link active" href="attendance.html">Attendance</a></li>
+                <li class="nav-item"><a class="nav-link" href="exams.html">Exams & Result</a></li>
+                <li class="nav-item"><a class="nav-link" href="fees.html">Fees</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                 <li class="nav-item"><a class="nav-link" href="student_details.html">Student Details</a></li>
+               <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary px-4" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container my-5">
+
+    <!-- Page Title -->
+    <h2 class="fw-bold mb-4">Attendance Management</h2>
+
+    <!-- Filters -->
+    <div class="card shadow-sm border-0 p-4 mb-4">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Class</label>
+                <select class="form-select">
+                    <option selected disabled>Select Class</option>
+                    <option>10th Grade</option>
+                    <option>11th Grade</option>
+                    <option>12th Grade</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Date</label>
+                <input type="date" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <!-- Attendance Table -->
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll Number</th>
+                        <th class="text-center">Attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable">
+                    <tr>
+                        <td>Liam Harper</td>
+                        <td>101</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Olivia Bennett</td>
+                        <td>102</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Noah Carter</td>
+                        <td>103</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Emma Hayes</td>
+                        <td>104</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jackson Reed</td>
+                        <td>105</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ava Morgan</td>
+                        <td>106</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aiden Foster</td>
+                        <td>107</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Chloe Parker</td>
+                        <td>108</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lucas Wright</td>
+                        <td>109</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sophia Evans</td>
+                        <td>110</td>
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input attendance-check">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Save Button -->
+    <div class="text-end mt-4">
+        <button class="btn btn-primary px-4" onclick="saveAttendance()">
+            <i class='bx bx-save'></i> Save Attendance
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-white text-center py-4 mt-5">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-3">About Us</div>
+            <div class="col-md-3">Contact</div>
+            <div class="col-md-3">Privacy Policy</div>
+            <div class="col-md-3">Terms of Service</div>
+        </div>
+        <div class="social-icons mb-2">
+            <i class='bx bxl-twitter'></i>
+            <i class='bx bxl-facebook'></i>
+            <i class='bx bxl-instagram'></i>
+        </div>
+        <p class="mb-0">© 2024 EduLink. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="CSS/JAVASCRIPT/script.js"></script>
+</body>
+</html>
